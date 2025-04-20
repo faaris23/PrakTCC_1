@@ -1,0 +1,1 @@
+export const BASE_URL = "https://backend-056-283162572185.us-central1.run.app";
