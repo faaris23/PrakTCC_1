@@ -1,17 +1,17 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/backend-056", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/backend-IU777", "."]
     dir: "backend"
 
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/backend-056"]
+    args: ["push", "gcr.io/$PROJECT_ID/backend-IU777"]
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
     args:
       [
-        "run", "deploy", "backend-056",
-        "--image", "gcr.io/$PROJECT_ID/backend-056",
+        "run", "deploy", "backend-IU777",
+        "--image", "gcr.io/$PROJECT_ID/backend-IU777",
         "--timeout", "1000s",
         "--port", "3000",
         "--region", "us-central1",
